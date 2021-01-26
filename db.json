@@ -1,28 +1,30 @@
 {
-    "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-    "title": "Quiz CSS da Alura",
+    "bg": "https://cdn.wallpapersafari.com/99/22/kPDWyc.jpg",
+    "title": "Opala Quiz",
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
         {
-            "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-            "title": "Como fazer um seletor por id via CSS?",
+            "image": "https://ogimg.infoglobo.com.br/in/3198433-b98-561/FT631A/Linha-de-montagem-do-Opala-FotoDivulgacao.jpg",
+            "title": "Qual foi o ultimo ano de produção do opala?",
             "description": "Essa é pra aquecer",
-            "answer": 2,
+            "answer": 1,
             "alternatives": [
-                ".elemento",
-                "*elemento",
-                "#elemento",
-                "%elemento"
+                "1990",
+                "1992",
+                "1991",
+                "1989"
             ]
         },
         {
-            "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-            "title": "Como fazer um background gradiente com css?",
-            "description": "Faz tempo em haha",
-            "answer": 0,
+            "image": "https://media.gazetadopovo.com.br/2018/11/03ab738c656c3713c8686a5da7ee45af-gpMedium.jpg",
+            "title": "Qual o nome da versão topo de linha do opala 1992?",
+            "description": "A mesma versão que Itamar Franco, ex-presidente do Brasil utilizou",
+            "answer": 2,
             "alternatives": [
-                "background: linear-gradient(#e66465, #9198e5);",
-                "background: gradient(#e66465, #9198e5);"
+                "Comodoro",
+                "De Luxo",
+                "Diplomata",
+                "SS"
             ]
         }
     ],
@@ -31,8 +33,8 @@
     ],
     "theme": {
         "colors": {
-            "primary": "#0d47a1",
-            "secondary": "#29b6f6",
+            "primary": "#8a1c1c",
+            "secondary": "#ff5722",
             "mainBg": "#171B35",
             "contrastText": "#FFFFFF",
             "wrong": "#FF5722",

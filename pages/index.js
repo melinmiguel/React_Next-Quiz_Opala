@@ -30,17 +30,18 @@ export default function Home() {
       <QuizContainar>
         <Widget>
           <Widget.header>
-            <h1> the Legend os Alura</h1>
+            <h1> História do Opala no Brasil</h1>
           </Widget.header>
           <Widget.Content>
-            <p> lorem ipisulum banana pera m~çao ovo macarom lindo bonitao</p>
+            <p> Para os fãs de opala, agora temos esse quiz com perguntas e respostas, onde testaremos seus conhecimentos sobre
+              a história deste icone da industria brasileira!</p>
           </Widget.Content>
         </Widget>
 
         <Widget>
           <Widget.Content>
             <h1> Quizes da Galera</h1>
-            <p> Aqui a gente coloca os links dos quis delez</p>
+            <p> em breve!</p>
           </Widget.Content>
         </Widget>
         <Footer />
