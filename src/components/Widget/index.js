@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Widget = styled.div`
   margin-top: 24px;
@@ -21,7 +21,7 @@ const Widget = styled.div`
   }
 `;
 
-Widget.header = styled.header`
+Widget.Header = styled.header`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -32,7 +32,6 @@ Widget.header = styled.header`
     margin: 0;
   }
 `;
-
 
 Widget.Content = styled.div`
   padding: 24px 32px 32px 32px;

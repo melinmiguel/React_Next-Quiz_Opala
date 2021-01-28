@@ -1,19 +1,22 @@
-import styled from 'styled-components'
-import db from '../db.json'
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
+import styled from 'styled-components';
+import Head from 'next/head';
+import React from 'react';
+import { useRouter } from 'next/router';
 
+import db from '../db.json';
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
 
-const BackgroundImage = styled.div`
-background-image: url(${db.bg});
-flex: 1;
-background-size: cover;
-background-position: center;
-`;
+// const BackgroundImage = styled.div`
+// background-image: url(${db.bg});
+// flex: 1;
+// background-size: cover;
+// background-position: center;
+// `;
 
-export const QuizContainar = styled.div` 
+export const QuizContainer = styled.div` 
   width: 100%;
   max-width: 350px;
   padding-top: 45px;
@@ -25,16 +28,39 @@ export const QuizContainar = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <QuizContainar>
+      <Head>
+        <title> Quiz Opala - Modelo Base</title>
+      </Head>
+      <QuizContainer>
         <Widget>
-          <Widget.header>
+          <Widget.Header>
             <h1> História do Opala no Brasil</h1>
-          </Widget.header>
+          </Widget.Header>
           <Widget.Content>
-            <p> Para os fãs de opala, agora temos esse quiz com perguntas e respostas, onde testaremos seus conhecimentos sobre
-              a história deste icone da industria brasileira!</p>
+            <form onSubmit={function (infosDoEvento) {
+              infosDoEvento.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo uma submissão por meio do react');
+            }}
+            >
+              <input
+                onChange={function (infosDoEvento) {
+                  // console.log(infosDoEvento.target.value);
+                  // name = infosDoEvento.target.value;
+                  setName(infosDoEvento.target.value);
+                }}
+                placeholder="Digite seu nome!"
+              />
+              <button type="submit" disable={name.length === '0'}>
+                jogar,
+                {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
 
@@ -45,7 +71,7 @@ export default function Home() {
           </Widget.Content>
         </Widget>
         <Footer />
-      </QuizContainar>
+      </QuizContainer>
       <GitHubCorner projectUrl="www.github.com/melinmiguel" />
     </QuizBackground>
   );
